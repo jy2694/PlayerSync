@@ -1,0 +1,33 @@
+# Velocity를 사용 시에 활성화해주세요.
+# 다른 서버에서 이동하여 올 때 이전 서버에서 데이터가 저장 중일 경우 저장 완료를 기다리는 기능을 제공합니다.
+velocity:
+  # Velocity 사용 여부
+  enable: true
+  # 플러그인을 넣은 서버의 이름
+  server-name: 'lobby'
+  # 해당 서버를 포함한 총 서버 개수
+  total-server-count: 2
+  # 요청 후 응답을 기다리는 최대 시간(틱 단위)
+  request-timeout-ticks: 600
+
+# 데이터베이스 구성 설정
+database:
+  # 데이터베이스 유형 선택 (MYSQL, MARIADB, REDIS)
+  type: 'MYSQL'
+  # MySQL 구성 (type이 MYSQL일 경우에만 사용)
+  mysql:
+    host: 'localhost'
+    port: 3306
+    username: 'root'
+    password: 'root'
+  # MariaDB 구성 (type이 MARIADB일 경우에만 사용)
+  mariadb:
+    host: 'localhost'
+    port: 3306
+    username: 'root'
+    password: 'root'
+  # Redis 구성 (type이 REDIS일 경우에만 사용)
+  redis:
+    host: 'localhost'
+    port: 6379
+    password: 'root'
