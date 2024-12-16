@@ -13,7 +13,7 @@ import io.github.jy2694.playersync.exception.NotSynchronizableClassException;
 public class ClassBinder {
     private List<Class<?>> classList = new ArrayList<>();
 
-    public void bindClass(Class<?> clazz) throws NotSynchronizableClassException, NotSerializableException {
+    public void bindClass(Class<?> clazz) throws NotSynchronizableClassException {
         if(!clazz.isAnnotationPresent(Synchronizable.class)) {
             throw new NotSynchronizableClassException("Class " + clazz.getName() + " is not annotated with @Synchronizable");
         }
